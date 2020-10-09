@@ -1,26 +1,25 @@
 #include <stdio.h>
 
 int main() {
-
-    double M[12][12];
-    int C;
-    int i,j;
-    char T[5];
+    int tamanho = 12;
+    double M[tamanho][tamanho];
+    int C,i,j;
+    char T;
     double soma = 0.0;
 
     scanf("%d",&C);
     scanf("%s",&T);
 
-    for (i=0;i<12;i++){
-        for(j=0;j<12;j++){
+    for (i=0;i<tamanho;i++){
+        for(j=0;j<tamanho;j++){
             scanf("%lf",&M[i][j]);
         }
     }
-    for (i=0;i<12;i++){
+    for (i=0;i<tamanho;i++){
         soma+=M[i][C];
     }
-    if (T[0] == 'M'){
-        soma = soma/12.0;
+    if (T == 'M'){
+        soma = soma/tamanho;
     }
     printf("%.1lf\n",soma);
 
