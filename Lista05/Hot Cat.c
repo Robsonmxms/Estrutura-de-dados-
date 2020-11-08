@@ -80,7 +80,7 @@ void atendimento(Fila* f,int dif,int s){
           f->n_max_pessoas = f->n_Itens;
         }
         f->n_pessoas+=1;
-        f->soma_tempo+=s-f->primeiro;
+        f->soma_tempo+=s-f->dados[f->primeiro];
         remover(f);
       }
     }
